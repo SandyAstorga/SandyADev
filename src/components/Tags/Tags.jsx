@@ -1,10 +1,10 @@
+import { Tag } from 'primereact/tag';
 import { useContext } from 'react';
-import { SearchBar } from '../SearchBar/SearchBar';
-import {categories} from '../../helpers/utils.js';
+import { categories } from '../../helpers/utils.js';
 import { CategoryContext } from '../../Contexts/CategoryProvider.jsx';
 import { useNavigate } from 'react-router-dom';
 
-export const NavBar = () => {
+export const Tags = () => {
     const { setSelectedCategory } = useContext(CategoryContext);
     const navigate = useNavigate();
 
@@ -14,15 +14,15 @@ export const NavBar = () => {
     };
 
     return (
-        <div className="container-nav">
-            <div className="nav-menu">
-                {categories?.map((category, index)=> (
+        <>
+            <h1 >TAGS</h1>
+            <div className='test'>
+                {categories?.map((category, index) => (
                     <div key={index} onClick={() => handleCategoryClick(category.label)}>
-                    <p>{category.label}</p>
+                        <Tag className='color-tag' rounded>{category.label}</Tag>
                     </div>
                 ))}
             </div>
-            <SearchBar/>
-        </div>
-    )
+        </>
+    );
 }

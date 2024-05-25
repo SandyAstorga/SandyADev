@@ -39,6 +39,21 @@ body {
 .container-views{
     width: 100%;
 }
+.container-logo-blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.name{
+    text-decoration: none;
+    color: black;
+    font-size: clamp(.7rem, 22.5vw, .5rem);
+    cursor: pointer;
+}
+.name:hover {
+    color: var(--soft);
+}
 
 /* Header PrimeReact*/
 .p-megamenu[pr_id_1].p-megamenu-mobile-active .p-megamenu-root-list {
@@ -47,7 +62,7 @@ body {
 .p-megamenu {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 4.5rem;
+    padding: 1rem 2rem;
     width: 100%;
 }
 .p-megamenu-root-list {
@@ -75,6 +90,7 @@ svg.p-icon {
 #pr_id_1_list {
     padding: 1rem 2rem 1rem 4rem;
     align-items: start;
+    width: 100%;
 }
 #pr_id_1_sub_0{
     padding: .3rem 1rem;
@@ -170,10 +186,16 @@ svg.p-icon {
 .container-card-principal{
     margin: 2.5rem;
 }
+.container-card-principal h1{
+    text-align: center;
+    color: var(--neutro);
+    letter-spacing: .2rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);    
+}
 .post-principal {
     height: 400px;
     overflow: hidden;
-    margin: 2rem 2rem;
+    margin: 1.5rem 2rem;
     background: var(--neutro);
     border-radius: 2rem;
     border: 2px solid rgba(0, 0, 0, 1);
@@ -264,7 +286,7 @@ footer {
     /* flex-direction: column-reverse; */
     justify-content: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 1.5rem;
     gap: 1rem;
@@ -379,6 +401,48 @@ footer a {
     border-radius: 2rem;
     border: 2px solid rgba(0, 0, 0, 1);
 }
+.title-categories{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    letter-spacing: .3rem;
+    padding: 1.5rem 5rem 0rem;
+    color: var(--soft);
+    text-transform: uppercase;
+}
+
+/* Carousel */
+.container-carousel{
+    margin: 0 1.5rem;
+    padding-bottom: .5rem;
+}
+
+/* PrimeReact Carousel */
+.p-carousel-items-content{
+    margin: 0 1.5rem;
+}
+
+/* Tags */
+.test{
+    display: none;
+}
+.color-tag{
+    background: var(--neutro);
+}
+
+/* Filters */
+.container-filtered{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neutro);
+    border-radius: .5rem;
+}
+.container-filtered p{
+    color: var(--principal);
+    font-size: clamp(.7rem, 2.5vw, 1rem);
+    font-weight: 500;   
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
 /* Responsive */
 @media screen and (min-width: 561px) {
@@ -387,7 +451,19 @@ footer a {
     }
 }
 
+@media screen and (min-width: 400px) {
+    #pr_id_1_list {
+        width: 60%;
+    }
+}
+
 @media screen and (max-width: 770px) {
+    .test{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem
+    }
     .p-megamenu[pr_id_1] {
         background-color: var(--soft);
         height: 65px;
@@ -409,7 +485,7 @@ footer a {
         left: 5%;
     }
     .p-menuitem-text {
-        text-transform: capitalize;
+        text-transform: inherit;
     }
     .p-menuitem-text:hover {
         color: var(--principal);
@@ -424,8 +500,11 @@ footer a {
     .container-card-principal{
         margin: 0;
     }
+    .container-card-principal h1{
+        padding-top: 1rem;
+    }
     .posts{
-        margin: 1rem 2rem;
+        margin: .7rem 2rem;
     }
     .section-post{
         flex-direction: column;
@@ -438,6 +517,18 @@ footer a {
     .more-posts{
         width: 100%;
         padding: 0;
+    }
+    .title-categories{
+        padding: 1.5rem 1.2rem .7rem;
+    }
+    .container-carousel{
+        margin: 0 .5rem;
+    }
+    .name{
+        color: var(--principal);
+    }
+    .name:hover{
+        color: var(--principal);
     }
     footer {
         display: flex;
@@ -459,6 +550,12 @@ footer a {
     }
     .posts{
         margin: 1rem 3rem;
+    }
+    .title-categories{
+        padding: 1.5rem 3rem 1.5rem;
+    }
+    #pr_id_1_list {
+        width: auto;
     }
 }
 
@@ -482,10 +579,19 @@ footer a {
     .container-card-principal{
         margin: 0 3rem;
     }
+    .container-card-principal h1{
+        margin: 1.7rem 0rem;
+    }
+    .title-categories{
+        padding: 1.5rem 7rem 1.7rem;
+    }
     .posts{
         margin: 1rem 5rem;
     }
+    .container-carousel{
+        margin: 0 1.5rem;
+    }
     footer{
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 }

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const Card = ({ title, image, date, categorie, subCategorie}) => {
+export const Card = ({ title, image, date, category, subCategory}) => {
   return (
     <>
       <div className="post">
@@ -9,8 +9,8 @@ export const Card = ({ title, image, date, categorie, subCategorie}) => {
         </section>
         <section style={{padding: '0.2rem'}}>
           <h1>{title}</h1>
-          <p style={{ color: 'black', cursor: 'auto' }}>{categorie} - <span>
-            {subCategorie}</span></p>
+          <p style={{ color: 'black', cursor: 'auto' }}>{category} - <span>
+            {subCategory}</span></p>
           <p style={{ color: '#333333', cursor: 'auto' }}>{date}</p>
         </section>
       </div>
@@ -23,6 +23,6 @@ Card.propTypes = {
   content: PropTypes.string,
   image: PropTypes.string,
   date: PropTypes.string,
-  categorie: PropTypes.string,
-  subCategorie: PropTypes.string,
+  category: PropTypes.string,
+  subCategory: PropTypes.string,
 };

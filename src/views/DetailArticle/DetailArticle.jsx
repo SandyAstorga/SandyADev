@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { myPosts } from '../../posts/posts.js';
 import { handleUp, shuffleArray } from "../../helpers/utils.js";
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 
 export const DetailArticle = () => {
@@ -34,14 +35,14 @@ export const DetailArticle = () => {
                     {selectedPost ? (
                         <div className="post-detail">
                             <h2>{selectedPost.title}</h2>
-                            <p>{selectedPost.categorie} - <span style={{ color: '#333333' }}>{selectedPost.date}</span> </p>
+                            <p>{selectedPost.category} - <span style={{ color: '#333333' }}>{selectedPost.date}</span> </p>
                             <div className="image-detail-post">
                                 <img src={selectedPost.image} alt={selectedPost.image} />
                             </div>
                             <p>{selectedPost.content}</p>
                         </div>
                     ) : (
-                        <p>Cargando...</p>
+                        <ProgressSpinner />
                     )}
                 </section>
                 <section className="more-posts container-detail-posts">
@@ -62,8 +63,8 @@ export const DetailArticle = () => {
                                     </section>
                                     <section className="two">
                                         <h1>{post.title}</h1>
-                                        <p style={{ color: 'black', cursor: 'auto' }}>{post.categorie} - <span>
-                                            {post.subCategorie}</span></p>
+                                        <p style={{ color: 'black', cursor: 'auto' }}>{post.category} - <span>
+                                            {post.subCategory}</span></p>
                                         <p style={{ color: '#333333', cursor: 'auto' }}>{post.date}</p>
                                     </section>
                                 </div>
