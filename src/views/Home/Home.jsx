@@ -51,7 +51,7 @@ export const Home = () => {
 
           {data ? (
             <div className="container-card-principal">
-              <h1>ARTÍCULO DE LA SEMANA</h1>
+              {/* <h1>ARTÍCULO DE LA SEMANA</h1> */}
               <section className="post-principal">
                 <img src={data?.image} alt={data?.title} />
                 <div className='data'>
@@ -64,17 +64,12 @@ export const Home = () => {
                   </Link>
                 </div>
               </section>
-            </div>
-          ) : (
-            <></>
-          )}
 
-
-          {destacados?.length > 0 ? (
+              {destacados?.length > 0 ? (
             <>
-              <h1 className='title-categories'>DESTACADOS</h1>
-              <section className="posts">
-                {destacados?.slice(0, 3).map(post => (
+              {/* <h1 className='title-categories'>DESTACADOS</h1> */}
+              <section className='posts-destacados'>
+                {destacados?.slice(0, 2).map(post => (
                   <Link key={post.id} to={`/post/${post.id}`} className='option' onClick={handleUp}>
                     <Card
                       key={post.id}
@@ -91,6 +86,13 @@ export const Home = () => {
           ) : (
             <></>
           )}
+            </div>
+          ) : (
+            <></>
+          )}
+
+
+          
 
           <CarouselPosts category="Programación" />
 

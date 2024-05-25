@@ -205,27 +205,35 @@ svg.p-icon {
     width: 30px;
 }
 .container-card-principal{
-    margin: 2.5rem;
+    margin: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container-card-principal h1{
     text-align: center;
-    color: var(--neutro);
     letter-spacing: .2rem;
     font-size: clamp(1rem, 2.5vw, 2rem);    
 }
 .post-principal {
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     margin: 1rem 1rem;
     background: var(--neutro);
     border-radius: 2rem;
     border: 2px solid rgba(0, 0, 0, 1);
+    width: 70%;
 }
 .post-principal img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(0.5);
+}
+.posts-destacados{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
 }
 .data{
     text-align: center;
@@ -271,7 +279,6 @@ svg.p-icon {
     border-radius: 0 2.5rem;
     border: 2px solid rgba(0, 0, 0, 1);
     height: 100%;
-    bottom: auto;
 }
 .post h1{
     font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -360,7 +367,6 @@ footer a {
     gap: 1.5rem;
 }
 .container-profile{
-    /* background-color: var(--principal); */
     width: 150px;
     height: 150px;
     display: flex;
@@ -542,6 +548,7 @@ footer a {
     }
 }
 
+
 @media screen and (max-width: 770px) {
     .back-icons .header-end{
         display: flex;
@@ -556,7 +563,7 @@ footer a {
     .container-tags{
         display: flex;
         flex-direction: column;
-        padding: 1.7rem 0rem
+        padding: 1rem 0rem
     }
     .container-tags h1 {
         padding-top: 0rem;
@@ -591,14 +598,18 @@ footer a {
         display: none;
     }
     .post-principal {
-        margin: 1.5rem 1rem;
         height: 350px;
+        width: 100%;
+    }
+    .posts-destacados{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-bottom: 1.2rem;
     }
     .container-card-principal{
-        margin: 0;
-    }
-    .container-card-principal h1{
-        padding-top: 1rem;
+        flex-direction: column;
+        margin: 0rem .5rem;
     }
     .posts{
         margin: .7rem .9rem;
@@ -638,9 +649,6 @@ footer a {
     .posts{
         grid-template-columns: repeat(3, 1fr);
     }
-    /* .posts{
-        margin: 0 3rem;
-    } */
     .title-categories{
         padding: 1.5rem 3rem 1rem;
     }
@@ -663,7 +671,7 @@ footer a {
         width: 100%;
     }
     .container-views {
-        width: 1350px;
+        width: 1400px;
     }
     .p-megamenu {
         width: 1400px;
@@ -672,18 +680,9 @@ footer a {
     .container-nav{
         width: 1300px;
     }
-    /* .container-card-principal{
-        margin: 0 3rem;
-    } */
-    .container-card-principal h1{
-        margin: 1.7rem 0rem;
-    }
     .title-categories{
         padding: 1.5rem 7rem 1rem;
     }
-    /* .posts{
-        margin: 0 5rem;
-    } */
     .container-carousel{
         margin: 0 1.5rem;
     }

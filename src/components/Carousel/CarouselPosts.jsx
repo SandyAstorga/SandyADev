@@ -45,7 +45,7 @@ export const CarouselPosts = ({ category }) => {
         <div className='container-carousel'>
     {products?.length > 2 ? (
         <>
-            <h1 className='title-categories'>{products.length ? products[0].category : ''}</h1>
+            {/* <h1 className='title-categories'>{products.length ? products[0].category : ''}</h1> */}
             <Carousel value={products} numVisible={numVisible} numScroll={3} itemTemplate={productTemplate} responsiveOptions={responsiveOptions} />
         </>
     ) : (
