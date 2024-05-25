@@ -15,13 +15,15 @@ export const Tags = () => {
 
     return (
         <>
-            <h1 >TAGS</h1>
-            <div className='test'>
-                {categories?.map((category, index) => (
-                    <div key={index} onClick={() => handleCategoryClick(category.label)}>
-                        <Tag className='color-tag' rounded>{category.label}</Tag>
-                    </div>
-                ))}
+            <div className='container-tags'>
+                <h1 className='title-categories'>Categorias</h1>
+                <div className='tags'>
+                    {categories?.map((category, index) => (
+                        <div key={index} onClick={() => handleCategoryClick(category.label)}>
+                            <Tag className='color-tag' rounded>{category.label}</Tag>
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     );

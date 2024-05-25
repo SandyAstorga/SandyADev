@@ -11,6 +11,7 @@ export const App = () => {
         <Header />
         <div className="container-views">
           <Routes>
+            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<About />} />
             <Route path="/post/:id" element={<DetailArticle />} />
@@ -21,4 +22,10 @@ export const App = () => {
     </>
   )
 };
+
+const NotFound = () => {
+  return (
+    <h2>404: Page Not Found</h2>
+  )
+}
 

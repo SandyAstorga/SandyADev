@@ -10,7 +10,7 @@ import { Icons } from '../Icons/Icons';
 import { SearchBar } from '../SearchBar/SearchBar';
 
 export const Header = () => {
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 770);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 770);
     const [start, setStart] = useState([]);
 
     const homeLink = "/";
@@ -18,7 +18,7 @@ export const Header = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            const smallScreen = window.innerWidth <= 770;
+            const smallScreen = window.innerWidth < 770;
             setIsSmallScreen(smallScreen);
             updateMenuItems(smallScreen);
         };
@@ -56,7 +56,7 @@ export const Header = () => {
                 <Avatar image={profile} shape="circle" className='avatar' />
             </Link>
             <Link to={homeLink} className='name'>
-                <h1>SandyADev</h1>
+                <span>SandyADev</span>
             </Link>
         </div>
     );
