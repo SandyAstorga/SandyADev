@@ -58,12 +58,12 @@ export const responsiveOptions = [
         numScroll: 1
     },
     {
-        breakpoint: '790px',
+        breakpoint: '890px',
         numVisible: 2,
         numScroll: 1
     },
     {
-        breakpoint: '556px',
+        breakpoint: '560px',
         numVisible: 1,
         numScroll: 1
     }

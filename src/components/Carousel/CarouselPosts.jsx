@@ -9,16 +9,16 @@ import PropTypes from 'prop-types';
 
 export const CarouselPosts = ({ category }) => {
     const [products, setProducts] = useState([]);
-    const [numVisible, setNumVisible] = useState(4);
+    const [numVisible, setNumVisible] = useState(3);
 
 
     useEffect(() => {
         getPosts(myPosts).then((data) => {
             const filteredPosts = data.filter(post => post.category.toLowerCase() === category.toLowerCase());
-            setProducts(filteredPosts.slice(0, 5));
+            setProducts(filteredPosts.slice(0, 4));
 
 
-            if (filteredPosts.length <= 4) {
+            if (filteredPosts.length <= 3) {
                 setNumVisible(filteredPosts.length);
             }
         });
@@ -43,15 +43,32 @@ export const CarouselPosts = ({ category }) => {
 
     return (
         <div className='container-carousel'>
-            {products?.length > 0 ? (
-                <>
-                    <h1 className='title-categories'>{products[0].category}</h1>
-                    <Carousel value={products} numVisible={numVisible} numScroll={4} itemTemplate={productTemplate} responsiveOptions={responsiveOptions} />
-                </>
-            ) : (
-                <></>
-            )}
-        </div>
+    {products?.length > 2 ? (
+        <>
+            <h1 className='title-categories'>{products.length ? products[0].category : ''}</h1>
+            <Carousel value={products} numVisible={numVisible} numScroll={3} itemTemplate={productTemplate} responsiveOptions={responsiveOptions} />
+        </>
+    ) : (
+        <>
+            <h1 className='title-categories'>{products.length ? products[0].category : ''}</h1>
+            <section className="posts">
+                {products.map(post => (
+                    <Link key={post.id} to={`/post/${post.id}`} className='option' onClick={handleUp}>
+                        <Card
+                            key={post.id}
+                            category={post.category}
+                            subCategory={post.subCategory}
+                            title={post.title}
+                            date={post.date}
+                            image={post.image}
+                        />
+                    </Link>
+                ))}
+            </section>
+        </>
+    )}
+</div>
+
     )
 };
 

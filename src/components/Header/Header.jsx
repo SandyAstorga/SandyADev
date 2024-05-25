@@ -36,7 +36,7 @@ export const Header = () => {
             setStart([
                 { label: "Home", url: homeLink },
                 { label: "Acerca de mi", url: aboutMeLink },
-                { label: 'Portfolio' },
+                { label: 'Portfolio', command: () => window.open('https://portfolio-sandyastorga.vercel.app/', '_blank', 'noopener,noreferrer') },
                 { separator: true },
                 {label: <SearchBar/>},
                 { separator: true }
@@ -45,7 +45,7 @@ export const Header = () => {
             setStart([
                 { label: "Home", url: homeLink },
                 { label: "Acerca de mi", url: aboutMeLink },
-                { label: 'Portfolio' }
+                { label: 'Portfolio', command: () => window.open('https://portfolio-sandyastorga.vercel.app/', '_blank', 'noopener,noreferrer') },
             ]);
         }
     };
@@ -55,9 +55,7 @@ export const Header = () => {
             <Link to={homeLink}>
                 <Avatar image={profile} shape="circle" className='avatar' />
             </Link>
-            <Link to={homeLink} className='name'>
-                <span>SandyADev</span>
-            </Link>
+            <span className='name'>SandyADev</span>
         </div>
     );
 

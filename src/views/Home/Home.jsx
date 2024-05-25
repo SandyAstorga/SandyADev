@@ -6,6 +6,7 @@ import { handleUp, postPrincipal, postsDestacados } from '../../helpers/utils.js
 import { Link } from 'react-router-dom';
 import { CarouselPosts } from '../../components/Carousel/CarouselPosts.jsx';
 import { Tags } from '../../components/Tags/Tags.jsx';
+import { Tag } from 'primereact/tag';
 
 
 export const Home = () => {
@@ -17,7 +18,6 @@ export const Home = () => {
     setSelectedCategory('');
   };
   let data = postPrincipal(myPosts);
-  console.log(data)
   let destacados = postsDestacados(myPosts);
 
   return (
@@ -25,8 +25,8 @@ export const Home = () => {
       {selectedCategory || filteredPosts.length > 0 ? (
         <>
           <div className='container-filtered'>
-            <h1 className='title-categories'>{selectedCategory ? selectedCategory.toUpperCase() : []}</h1>
-            {selectedCategory && <p onClick={showAllCategories}>Mostrar todos</p>}
+            <h1>{selectedCategory ? selectedCategory.toUpperCase() : []}</h1>
+            {selectedCategory && <Tag onClick={showAllCategories} className='color-tag' style={{color: 'black'}} rounded>Mostrar todos</Tag>}
           </div>
 
           <div className="posts">

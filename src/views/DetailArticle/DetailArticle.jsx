@@ -35,11 +35,11 @@ export const DetailArticle = () => {
                     {selectedPost ? (
                         <div className="post-detail">
                             <h2>{selectedPost.title}</h2>
-                            <p>{selectedPost.category} - <span style={{ color: '#333333' }}>{selectedPost.date}</span> </p>
+                            <p>{selectedPost.category} ‣ <span>{selectedPost.subCategory}</span> ‣ <span style={{ color: '#333333' }}>{selectedPost.date}</span> </p>
                             <div className="image-detail-post">
                                 <img src={selectedPost.image} alt={selectedPost.image} />
                             </div>
-                            <p>{selectedPost.content}</p>
+                            <p className="post-content">{selectedPost.content}</p>
                         </div>
                     ) : (
                         <ProgressSpinner />

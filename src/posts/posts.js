@@ -2,7 +2,7 @@
 export const myPosts = [
     {
         id: 1,
-        category: 'Programación',
+        category: 'Videojuegos',
         subCategory: 'Javascript',
         type: 'secundario',
         title: '¿Por que aprender a programar?',
@@ -12,7 +12,7 @@ export const myPosts = [
     },
     {
         id: 2,
-        category: 'Tecnologia',
+        category: 'Videojuegos',
         subCategory: 'Javascript',
         type: 'secundario',
         title: '¿Que es Javascript?',
@@ -44,7 +44,7 @@ export const myPosts = [
         id: 5,
         category: 'Videojuegos',
         subCategory: 'Javascript',
-        type: 'destacado',
+        type: 'secundario',
         title: 'sdfghjkertyui',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         date: 'Mayo 20, 2024',
@@ -52,7 +52,7 @@ export const myPosts = [
     },
     {
         id: 6,
-        category: 'Programación',
+        category: 'Videojuegos',
         subCategory: 'sdyfgyuhij',
         type: 'destacado',
         title: 'Que es la programacion',

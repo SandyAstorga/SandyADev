@@ -52,9 +52,6 @@ body {
     cursor: pointer;
     font-weight: 600;
 }
-.name:hover {
-    color: var(--soft);
-}
 
 /* Header PrimeReact*/
 .p-megamenu[pr_id_1].p-megamenu-mobile-active .p-megamenu-root-list {
@@ -104,6 +101,8 @@ svg.p-icon {
 .p-menuitem-content{
     width: 130px;
 }
+
+
 
 /* Header Styles */
 .header-end {
@@ -161,6 +160,7 @@ svg.p-icon {
 }
 
 
+
 /* SearchBar */
 .container-search-bar {
     display: flex;
@@ -180,6 +180,7 @@ svg.p-icon {
 }
 
 
+
 /* Posts */
 .container-card-principal{
     margin: 2.5rem;
@@ -193,7 +194,7 @@ svg.p-icon {
 .post-principal {
     height: 400px;
     overflow: hidden;
-    margin: 1.5rem 2rem;
+    margin: 1rem 1rem;
     background: var(--neutro);
     border-radius: 2rem;
     border: 2px solid rgba(0, 0, 0, 1);
@@ -243,25 +244,12 @@ svg.p-icon {
     box-sizing: border-box;
     text-align: center;
     padding: 0 0 1rem 0;
-    margin: 0;
+    margin: .5rem .5rem;
     background: var(--neutro);
     border-radius: 0 2.5rem;
     border: 2px solid rgba(0, 0, 0, 1);
-    /* max-width: 350px; */
     height: 100%;
-    /* display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 0 0 1rem 0;
-    margin: .5rem 0;
-    background: var(--neutro);
-    border-radius: 0 2.5rem;
-    border: 2px solid rgba(0, 0, 0, 1);
-    flex: 1 1 300px; 
-    max-width: 350px; 
-    min-height: 300px; 
-    height: 100%;  */
+    bottom: auto;
 }
 .post h1{
     font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -292,10 +280,11 @@ svg.p-icon {
     object-fit: cover;
 }
 
+
+
 /* Footer */
 footer {
     display: flex;
-    /* flex-direction: column-reverse; */
     justify-content: center;
     flex-direction: row;
     justify-content: space-around;
@@ -307,6 +296,7 @@ footer {
     width: 100%;
     position: relative;
     /* bottom: 0; */
+    margin-top: 1rem;
 }
 footer h1 {
     font-size: clamp(.6rem, 2.5vw, 1rem);
@@ -330,14 +320,16 @@ footer a {
     cursor: pointer;
 }
 
+
+
 /* About */
 .container-template{
-    /* overflow: hidden; */
     margin: 2rem 2rem;
     background: var(--neutro);
     border-radius: 2rem;
     border: 2px solid rgba(0, 0, 0, 1);
 }
+
 
 
 /* Posts-detail */
@@ -347,12 +339,13 @@ footer a {
     margin: 0 1rem;
 }
 .more-posts{
-    width: 30%;
+    width: 40%;
     height: 100%;
     padding: 1rem;
 }
 .more-posts .section-title{
     text-align: center;
+    padding: 1rem 0 0;
 }
 .post-detail{
     padding: 1.5rem;
@@ -380,29 +373,31 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    padding: 2.5rem;
     gap: 1.5rem;
 }
 .thumbnails {
     display: flex;
+    align-items: center;
 }
 .thumbnails .one {
     margin-right: 1rem;
 }
 .thumbnails .one img {
     width: 100px;
-    height: 55px;
+    height: 60px;
     object-fit: cover;
-    border-radius: .7rem;
+    border-radius: .5rem;
 }
 .thumbnails .one img:hover{
     filter: brightness(.5);
 }
 .thumbnails .two p{
-    font-size: clamp(.5rem, 2.5vw, .65rem);
+    font-size: clamp(.55rem, 2.5vw, .7rem);
 }
 .thumbnails .two h1 {
-    font-size: clamp(.5rem, 2.5vw, .8rem);
+    font-size: clamp(.6rem, 2.5vw, .9rem);
+    font-weight: 600;
 }
 .selected-post{
     width: 60%;
@@ -410,7 +405,7 @@ footer a {
 .container-detail-posts{
     margin: 1rem 1rem;
     background: var(--neutro);
-    border-radius: 2rem;
+    border-radius: 1rem 0;
     border: 2px solid rgba(0, 0, 0, 1);
 }
 .title-categories{
@@ -420,6 +415,14 @@ footer a {
     color: var(--soft);
     text-transform: uppercase;
 }
+.post-content {
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: pre-wrap;
+  }
+
+
 
 /* Carousel */
 .container-carousel{
@@ -427,10 +430,14 @@ footer a {
     padding-bottom: .5rem;
 }
 
+
+
 /* PrimeReact Carousel */
 .p-carousel-items-content{
     margin: 0 .7rem;
 }
+
+
 
 /* Tags */
 .container-tags{
@@ -448,6 +455,7 @@ footer a {
 .color-tag{
     background: var(--neutro);
     padding: .5rem .9rem;
+    font-weight: 700;
 }
 
 
@@ -455,19 +463,20 @@ footer a {
 /* Filters */
 .container-filtered{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    /* background-color: var(--neutro); */
-    border-radius: .5rem;
     gap: 2rem;
-}
-.container-filtered p{
     color: var(--soft);
-    font-size: clamp(.7rem, 2.5vw, 1rem);
     font-weight: 500;   
+    font-size: clamp(.7rem, 2.5vw, 1rem);
     text-transform: uppercase;
     cursor: pointer;
+    padding: 1rem 0 .5rem;
 }
+
+
+
+
 
 /* Responsive */
 @media screen and (min-width: 561px) {
@@ -535,7 +544,7 @@ footer a {
         padding-top: 1rem;
     }
     .posts{
-        margin: .7rem 2rem;
+        margin: .7rem .9rem;
     }
     .section-post{
         flex-direction: column;
@@ -555,9 +564,6 @@ footer a {
     .container-carousel{
         margin: 0 .5rem;
     }
-    .name{
-        color: var(--principal);
-    }
     footer {
         display: flex;
         flex-direction: column-reverse;
@@ -568,7 +574,6 @@ footer a {
 @media screen and (min-width: 771px) {
     .p-menuitem-content{
         width: 100%;
-        /* margin: .2rem; */
     }
     #pr_id_1_list {
         padding: 1rem;
@@ -576,9 +581,9 @@ footer a {
     .posts{
         grid-template-columns: repeat(3, 1fr);
     }
-    .posts{
+    /* .posts{
         margin: 0 3rem;
-    }
+    } */
     .title-categories{
         padding: 1.5rem 3rem 1rem;
     }
@@ -595,7 +600,7 @@ footer a {
         width: 100%;
     }
     .container-views {
-        width: 1400px;
+        width: 1350px;
     }
     .p-megamenu {
         width: 1400px;
@@ -604,18 +609,18 @@ footer a {
     .container-nav{
         width: 1300px;
     }
-    .container-card-principal{
+    /* .container-card-principal{
         margin: 0 3rem;
-    }
+    } */
     .container-card-principal h1{
         margin: 1.7rem 0rem;
     }
     .title-categories{
         padding: 1.5rem 7rem 1rem;
     }
-    .posts{
+    /* .posts{
         margin: 0 5rem;
-    }
+    } */
     .container-carousel{
         margin: 0 1.5rem;
     }
