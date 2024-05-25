@@ -9,7 +9,7 @@ export const Card = ({ title, image, date, category, subCategory}) => {
         </section>
         <section style={{padding: '0.2rem'}}>
           <h1>{title}</h1>
-          <p style={{ color: 'black', cursor: 'auto' }}>{category} - <span>
+          <p className='post-category'>{category} - <span>
             {subCategory}</span></p>
           <p style={{ color: '#333333', cursor: 'auto' }}>{date}</p>
         </section>
