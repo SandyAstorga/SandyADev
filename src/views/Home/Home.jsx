@@ -1,4 +1,4 @@
-import { useContext} from 'react';
+import { useContext } from 'react';
 import { CategoryContext } from '../../Contexts/CategoryProvider.jsx';
 import { Card } from '../../components/CardsArticles/Card.jsx';
 import { myPosts } from '../../posts/posts.js';
@@ -54,7 +54,7 @@ export const Home = () => {
 
           {data ? (
             <div className="container-card-principal">
-              <div style={{ width: '100%' }}>
+              <div className='container-card-one'>
                 <>
                   <h1 style={{ color: '#D2649A', background: 'black', padding: '.5rem', borderRadius: '.5rem', margin: '0 1.5rem' }}>ARTÍCULO DE LA SEMANA</h1>
                 </>
@@ -97,18 +97,20 @@ export const Home = () => {
           ) : (
             <></>
           )}
-          
+
           <div className='posts'>
-          {allData?.map(card => (
-            <Card
-              key={card.id}
-              category={card.category}
-              subCategory={card.subCategory}
-              title={card.title}
-              date={card.date}
-              image={card.image}
-            />
-          ))}
+            {allData?.map(card => (
+              <Link key={card.id} to={`/post/${card.id}`} className='option' onClick={handleUp}>
+                <Card
+                  key={card.id}
+                  category={card.category}
+                  subCategory={card.subCategory}
+                  title={card.title}
+                  date={card.date}
+                  image={card.image}
+                />
+              </Link>
+            ))}
           </div>
         </>
       )}
