@@ -41,10 +41,6 @@ body {
 }
 .container-views {
     width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start; */
 }
 .container-logo-blog {
     display: flex;
@@ -475,7 +471,6 @@ footer a {
 .title-categories {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     letter-spacing: 0.3rem;
-    /* padding: 1.5rem 5rem 0rem; */
     color: var(--principal);
     text-transform: uppercase;
 }
@@ -487,16 +482,6 @@ footer a {
     font-size: clamp(0.85rem, 2.5vw, 1rem);
 }
 
-/* Carousel */
-.container-carousel {
-    margin: 0 1.5rem;
-    padding-bottom: 0.5rem;
-}
-
-/* PrimeReact Carousel */
-.p-carousel-items-content {
-    margin: 0 0.7rem;
-}
 
 /* Tags */
 .container-tags {
@@ -533,17 +518,18 @@ footer a {
 }
 
 /* Responsive */
+@media screen and (min-width: 400px) {
+    #pr_id_1_list {
+        width: 60%;
+    }
+}
+
 @media screen and (min-width: 561px) {
     .posts {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (min-width: 400px) {
-    #pr_id_1_list {
-        width: 60%;
-    }
-}
 
 @media screen and (max-width: 1110px) {
     .container-card-principal {
@@ -575,7 +561,7 @@ footer a {
     }
     .p-megamenu[pr_id_1] {
         background-color: var(--neutro);
-        height: 70px;
+        height: 75px;
         display: flex;
         justify-content: flex-end;
         margin: 0;
@@ -605,25 +591,23 @@ footer a {
     }
     .post-principal {
         height: 350px;
-        /* width: 100%; */
     }
     .posts-destacados {
-        width: 100%;
+        width: 95%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         padding-bottom: 1.2rem;
+        gap: 1rem;
     }
     .container-card-principal {
         flex-direction: column;
+        padding: 0;
     }
-    /* .posts {
-        margin: 0.7rem 0.9rem;
-    } */
     .section-post {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 0.2rem;
+        margin: 0;
     }
     .selected-post {
         width: 100%;
@@ -631,9 +615,6 @@ footer a {
     .more-posts {
         width: 100%;
         padding: 0;
-    }
-    .container-carousel {
-        margin: 0 0.5rem;
     }
     footer {
         display: flex;
@@ -673,9 +654,6 @@ footer a {
     }
     .container-nav {
         width: 1300px;
-    }
-    .container-carousel {
-        margin: 0 1.5rem;
     }
     .posts {
         grid-template-columns: repeat(4, 1fr);
