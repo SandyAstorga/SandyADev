@@ -31,6 +31,9 @@ export const getPosts = (arr) => {
     return Promise.resolve(arr);
 };
 
+export const getAllPosts = (arr) => {
+    return arr;
+};
 
 export const categories = [
     { label: 'Programación' },
