@@ -41,10 +41,10 @@ body {
 }
 .container-views {
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: start; */
 }
 .container-logo-blog {
     display: flex;
@@ -616,9 +616,9 @@ footer a {
     .container-card-principal {
         flex-direction: column;
     }
-    .posts {
+    /* .posts {
         margin: 0.7rem 0.9rem;
-    }
+    } */
     .section-post {
         flex-direction: column;
         justify-content: center;
