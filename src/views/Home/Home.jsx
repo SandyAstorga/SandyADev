@@ -4,9 +4,9 @@ import { Card } from '../../components/CardsArticles/Card.jsx';
 import { myPosts } from '../../posts/posts.js';
 import { handleUp, postPrincipal, postsDestacados, getAllPosts } from '../../helpers/utils.js';
 import { Link } from 'react-router-dom';
-// import { CarouselPosts } from '../../components/Carousel/CarouselPosts.jsx';
 import { Tags } from '../../components/Tags/Tags.jsx';
 import { Tag } from 'primereact/tag';
+import { PaginatorCards } from '../../components/Paginator/PaginatorCards.jsx';
 
 
 
@@ -77,7 +77,7 @@ export const Home = () => {
                   <section className='posts-destacados'>
                     {destacados?.slice(0, 2).map(post => (
                       <Link key={post.id} to={`/post/${post.id}`} className='option' onClick={handleUp}>
-                        <Card
+                        <Card className='post'
                           key={post.id}
                           category={post.category}
                           subCategory={post.subCategory}
@@ -91,27 +91,15 @@ export const Home = () => {
                   </section>
                 </>
               ) : (
-                <></>
+                <>No hay articulos por Mostrar</>
               )}
             </div>
           ) : (
-            <></>
+            <>No hay articulos por Mostrar</>
           )}
+          
+          <PaginatorCards allData ={allData}/>
 
-          <div className='posts'>
-            {allData?.map(card => (
-              <Link key={card.id} to={`/post/${card.id}`} className='option' onClick={handleUp}>
-                <Card
-                  key={card.id}
-                  category={card.category}
-                  subCategory={card.subCategory}
-                  title={card.title}
-                  date={card.date}
-                  image={card.image}
-                />
-              </Link>
-            ))}
-          </div>
         </>
       )}
 

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 export const Card = ({ title, image, date, category, subCategory, type}) => {
   return (
     <>
-      <div className="post" style={{position: 'relative'}}>
-        <div style={{position: 'absolute',top: '3%', left: '2%'}}>
-          <span style={{textTransform: 'uppercase', fontWeight: '700', padding: '.2rem', color: 'black', borderRadius: '.2rem', fontSize: '.8rem' }}>{type}</span>
+      <div className="post">
+        <div className='bg-tag'>
+          <span className='type-tag'>{type}</span>
         </div>
         <section className='container-image'>
           <img className='image-post' src={image} alt={image} />
