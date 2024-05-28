@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 export const SearchContext = createContext();
 
 export const SearchProvider = ({ children }) => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
 
     return (
-        <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
+        <SearchContext.Provider value={{ searchQuery, setSearchQuery }}>
             {children}
         </SearchContext.Provider>
     );

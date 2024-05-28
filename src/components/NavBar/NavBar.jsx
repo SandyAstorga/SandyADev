@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext} from 'react';
 import { SearchBar } from '../SearchBar/SearchBar';
 import {categories} from '../../helpers/utils.js';
 import { CategoryContext } from '../../Contexts/CategoryProvider.jsx';

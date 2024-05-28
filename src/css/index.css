@@ -357,7 +357,7 @@ footer {
     margin-top: 1rem;
 }
 footer h1 {
-    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
     text-align: center;
 }
 footer a {
@@ -368,6 +368,7 @@ footer a {
     display: flex;
     gap: 1rem;
     font-weight: 600;
+    font-size: clamp(.85rem, 2.5vw, 1rem);
 }
 .option-footer {
     color: var(--neutro);
@@ -562,7 +563,14 @@ footer a {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-
+.results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--soft);
+    padding: 1rem 0;
+    font-size: clamp(.7rem, 2.5vw, 1rem);
+}
 
 /* Responsive */
 @media screen and (min-width: 400px) {
@@ -570,6 +578,7 @@ footer a {
         width: 60%;
     }
 }
+
 
 @media screen and (min-width: 561px) {
     .posts {

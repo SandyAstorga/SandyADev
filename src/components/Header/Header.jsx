@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import profile from '../../assets/sand.jpg';
 import { Icons } from '../Icons/Icons';
 import { SearchBar } from '../SearchBar/SearchBar';
+import { SearchProvider } from '../../Contexts/SearchContext';
 
 export const Header = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 770);
@@ -38,7 +39,7 @@ export const Header = () => {
                 { label: "Acerca de mi", url: aboutMeLink },
                 { label: 'Portfolio', command: () => window.open('https://portfolio-sandyastorga.vercel.app/', '_blank', 'noopener,noreferrer') },
                 { separator: true },
-                {label: <SearchBar/>},
+                {label: <SearchProvider><SearchBar /></SearchProvider>},
                 { separator: true }
             ]);
         } else {
@@ -65,8 +66,14 @@ export const Header = () => {
 
     return (
         <>
-            <MegaMenu model={start} start={image} end={end} orientation="horizontal"
+            {/* <MegaMenu model={start} start={image} end={end} orientation="horizontal"
                 breakpoint="770px" />
+            <NavBar /> */}
+            {isSmallScreen ? (
+                <MegaMenu model={start} start={image} end={end} orientation="horizontal" breakpoint="770px" />
+            ) : (
+                <MegaMenu model={start} start={image} end={end} orientation="horizontal" />
+            )}
             <NavBar />
         </>
     )
