@@ -2,8 +2,9 @@ import { InputText } from 'primereact/inputtext';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SearchContext } from '../../Contexts/SearchContext';
+import PropTypes from 'prop-types';
 
-export const SearchBar = () => {
+export const SearchBar = ({ className, closeMenu }) => {
     const [input, setInput] = useState('');
     const navigate = useNavigate();
     const { setSearchQuery } = useContext(SearchContext);
@@ -12,6 +13,7 @@ export const SearchBar = () => {
         setSearchQuery(input); 
         navigate(`/search/${input}`);
         setInput('')
+        closeMenu()
     };
 
     const handleKeyPress = (e) => {
@@ -25,7 +27,7 @@ export const SearchBar = () => {
     };
 
     return (
-        <div className="container-search-bar" onClick={handleClick}>
+        <div className={`container-search-bar ${className}`} onClick={handleClick}>
             <InputText
                 placeholder="Buscar"
                 type="text"
@@ -46,3 +48,9 @@ export const SearchBar = () => {
         </div>
     );
 };
+
+
+SearchBar.propTypes = {
+    className: PropTypes.string,
+    closeMenu: PropTypes.string,
+}

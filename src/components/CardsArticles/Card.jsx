@@ -11,10 +11,10 @@ export const Card = ({ title, image, date, category, subCategory, type}) => {
           <img className='image-post' src={image} alt={image} />
         </section>
         <section style={{padding: '0.2rem'}}>
-          <h1>{title}</h1>
+          <h1 className='post-title'>{title}</h1>
           <p className='post-category'>{category} - <span>
             {subCategory}</span></p>
-          <p style={{ color: '#333333', cursor: 'auto' }}>{date}</p>
+          <p className='post-date'>{date}</p>
         </section>
       </div>
     </>

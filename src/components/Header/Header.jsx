@@ -1,80 +1,75 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
-import { MegaMenu } from 'primereact/megamenu';
-import { Avatar } from 'primereact/avatar';
-import { NavBar } from '../NavBar/NavBar';
-import { Link } from 'react-router-dom';
-import profile from '../../assets/sand.jpg';
-import { Icons } from '../Icons/Icons';
 import { SearchBar } from '../SearchBar/SearchBar';
-import { SearchProvider } from '../../Contexts/SearchContext';
+import { Icons } from "../../components/Icons/Icons";
+import logo from '../../assets/icon.png';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Header = () => {
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 770);
-    const [start, setStart] = useState([]);
-
-    const homeLink = "/";
-    const aboutMeLink = "/about-me";
+    const [navClass, setNavClass] = useState('header1');
+    const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate(); 
 
     useEffect(() => {
-        const handleResize = () => {
-            const smallScreen = window.innerWidth < 770;
-            setIsSmallScreen(smallScreen);
-            updateMenuItems(smallScreen);
+        const handleScroll = () => {
+            if (window.pageYOffset <= 400) {
+                setNavClass('header1');
+            } else {
+                setNavClass('header2');
+            }
         };
 
-        handleResize();
+        const handleResize = () => {
+            if (window.innerWidth >= 770) {
+                setMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
 
         return () => {
+            window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleResize);
         };
     }, []);
 
-    const updateMenuItems = (smallScreen) => {
-        if (smallScreen) {
-            setStart([
-                { label: "Home", url: homeLink },
-                { label: "Acerca de mi", url: aboutMeLink },
-                { label: 'Portfolio', command: () => window.open('https://portfolio-sandyastorga.vercel.app/', '_blank', 'noopener,noreferrer') },
-                { separator: true },
-                {label: <SearchProvider><SearchBar /></SearchProvider>},
-                { separator: true }
-            ]);
-        } else {
-            setStart([
-                { label: "Home", url: homeLink },
-                { label: "Acerca de mi", url: aboutMeLink },
-                { label: 'Portfolio', command: () => window.open('https://portfolio-sandyastorga.vercel.app/', '_blank', 'noopener,noreferrer') },
-            ]);
-        }
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
     };
 
-    const image = (
-        <div className='container-logo-blog'>
-            <Link to={homeLink}>
-                <Avatar image={profile} shape="circle" className='avatar' />
-            </Link>
-            <span className='name'>SandyADev</span>
-        </div>
-    );
+    const handleMenuOption = (path) => {
+        setMenuOpen(false); 
+        navigate(path);
+    };
 
-    const end = (
-        <Icons/>
-    );
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
 
     return (
-        <>
-            {/* <MegaMenu model={start} start={image} end={end} orientation="horizontal"
-                breakpoint="770px" />
-            <NavBar /> */}
-            {isSmallScreen ? (
-                <MegaMenu model={start} start={image} end={end} orientation="horizontal" breakpoint="770px" />
-            ) : (
-                <MegaMenu model={start} start={image} end={end} orientation="horizontal" />
-            )}
-            <NavBar />
-        </>
-    )
-}
+        <nav id="header" className={navClass}>
+            <div className="container-header">
+                <div className="logo">
+                    <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                    <Link to='/'>
+                        <img src={logo} alt="logo" />
+                    </Link>
+                    </div>
+                    <p>SandyADev</p>
+                </div>
+                <div className={`links-menu ${menuOpen ? 'open' : ''}`}>
+                    <span className='option-header' onClick={() => handleMenuOption('/')}>Home</span>
+                    <span className='option-header' onClick={() => handleMenuOption('/about-me')}>Acerca de mi</span>
+                    <a className='option-header' href="https://portfolio-sandyastorga.vercel.app" target='_blank'>Portfolio</a>
+                    <br />
+                    <br />
+                    <SearchBar className='menu-search-bar' closeMenu={closeMenu} />
+                </div>
+                <Icons />
+                <div className="icono" id="open" onClick={toggleMenu}>
+                    <span>&#9776;</span>
+                </div>
+            </div>
+        </nav>
+    );
+};

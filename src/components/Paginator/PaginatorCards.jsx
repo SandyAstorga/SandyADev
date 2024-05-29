@@ -19,8 +19,7 @@ export const PaginatorCards = ({ allData }) => {
     const displayedData = allData.slice(startIndex, endIndex);
 
     return (
-        <div className="card">
-
+        <>
             <section style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '.7rem', marginTop: '1rem'}}>
                 <h1 style={{background: 'black', color: '#d2649a', padding: '.7rem 1rem', borderRadius: '1rem', letterSpacing: '.2rem'}}>ARTÍCULOS DE INTERES</h1>
                 <Paginator
@@ -46,7 +45,7 @@ export const PaginatorCards = ({ allData }) => {
                     </Link>
                 ))}
             </section>
-        </div>
+        </>
     );
 }
 
