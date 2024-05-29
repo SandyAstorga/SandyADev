@@ -20,7 +20,7 @@ export const PaginatorCards = ({ allData }) => {
 
     return (
         <>
-            <section style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '.7rem', marginTop: '1rem'}}>
+            <section style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '.7rem', marginTop: '6rem'}}>
                 <h1 style={{background: 'black', color: '#d2649a', padding: '.7rem 1rem', borderRadius: '1rem', letterSpacing: '.2rem'}}>ARTÍCULOS DE INTERES</h1>
                 <Paginator
                     first={first}

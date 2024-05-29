@@ -3,14 +3,16 @@ import { useContext } from 'react';
 import { categories } from '../../helpers/utils.js';
 import { CategoryContext } from '../../Contexts/CategoryProvider.jsx';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-export const Tags = () => {
+export const Tags = ({closeMenu}) => {
     const { setSelectedCategory } = useContext(CategoryContext);
     const navigate = useNavigate();
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
         navigate('/');
+        closeMenu()
     };
 
     return (
@@ -27,4 +29,9 @@ export const Tags = () => {
             </div>
         </>
     );
+}
+
+
+Tags.propTypes = {
+    closeMenu: PropTypes.string,
 }

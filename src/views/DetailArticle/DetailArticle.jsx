@@ -46,7 +46,7 @@ export const DetailArticle = () => {
                     )}
                 </section>
                 <section className="more-posts container-detail-posts">
-                    <h1 className="section-title">MAS ARTICULOS</h1>
+                    <h1 className="section-title">MAS ARTÍCULOS</h1>
                     <div className="container-more-posts">
                         {postsToShow.map(post => (
                             <Link

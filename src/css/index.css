@@ -215,15 +215,12 @@ body {
 }
 .post-category {
     color: black;
-    cursor: auto;
     font-size: clamp(0.85rem, 2.5vw, 1rem);
     font-weight: 500;
-    margin-bottom: 0;
+    margin-bottom: .2rem;
 }
 .post-date{
     color: #333333; 
-    cursor: auto;
-    margin-bottom: 0;
 }
 .data {
     display: flex;
@@ -297,6 +294,7 @@ body {
     font-weight: 600;
     margin-bottom: 0.7rem;
     letter-spacing: 0.2rem;
+    color: black;
 }
 .posts {
     display: grid;
@@ -312,10 +310,10 @@ body {
     text-align: center;
     padding: 0 0 1rem 0;
     margin: 0.5rem 0.5rem;
-    background: var(--neutro);
+    background: beige;
     border-radius: 0 2.5rem;
     border: 2px solid rgba(0, 0, 0, 1);
-    height: 100%;
+    height: 95%;
     position: relative;
 }
 .post .bg-tag{
@@ -325,17 +323,17 @@ body {
 }
 .post .bg-tag .type-tag{
     text-transform: uppercase;
-    font-weight: 700; 
+    font-weight: 900; 
     padding: .2rem; 
-    color: black; 
+    color: var(--principal); 
+    letter-spacing: .1rem;
     border-radius: .2rem;
     font-size: .8rem;
-    background: #d2649a;
 }
 .post .post-title {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     letter-spacing: 0.25px;
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.5rem;
 }
 .post .post-title:hover {
     color: var(--principal);
@@ -375,12 +373,14 @@ body {
 .more-posts {
     width: 40%;
     height: 100%;
-    padding: 1rem;
+    padding: 1rem 0; 
+    border: .2rem solid;
 }
 .more-posts .section-title {
     text-align: center;
     padding: 1rem 0 0;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--principal);
 }
 .post-detail {
     padding: 1.5rem;
@@ -393,7 +393,7 @@ body {
 }
 .post-detail p {
     padding-bottom: 1rem;
-    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
 }
 .image-detail-post {
     display: flex;
@@ -410,7 +410,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     gap: 1.5rem;
 }
 .thumbnails {
@@ -421,8 +421,8 @@ body {
     margin-right: 1rem;
 }
 .thumbnails .one img {
-    width: 100px;
-    height: 60px;
+    width: 75px;
+    height: 50px;
     object-fit: cover;
     border-radius: 0.5rem;
 }
@@ -430,23 +430,22 @@ body {
     filter: brightness(0.5);
 }
 .thumbnails .two p {
-    font-size: clamp(0.63rem, 2.5vw, 0.75rem);
+    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
 }
 .thumbnails .two h1 {
-    font-size: clamp(0.6rem, 2.5vw, 0.9rem);
+    font-size: clamp(0.78rem, 2.5vw, 0.9rem);
     font-weight: 600;
 }
 .selected-post {
-    width: 60%;
+    width: 75%;
 }
 .container-detail-posts {
     margin: 1rem 1rem;
     background: var(--soft);
     border-radius: 1rem 0;
-    border: .2rem solid;
 }
 .title-categories {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, .9rem);
     letter-spacing: 0.3rem;
     color: var(--principal);
     text-transform: uppercase;
@@ -484,19 +483,14 @@ body {
     border-style: groove;
 }
 .back-icons {
-    background-color: var(--principal);
-    border-radius: 0rem 1.9rem 0rem;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
 }
 .back-icons .icons:hover {
     fill: var(--soft);
 }
 .resume {
     text-align: center;
-    font-size: clamp(.92rem, 2.5vw, 1.2rem);
+    font-size: clamp(.9rem, 2.5vw, 1.1rem);
 }
 
 
@@ -508,19 +502,21 @@ body {
 }
 .container-tags h1 {
     margin-bottom: 0.7rem;
-    text-align: center;
 }
 .tags {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
     cursor: pointer;
-    /* color: var(--soft); */
+    gap: 1rem;
 }
 .color-tag {
-    background: var(--principal);
+    background: var(--soft);
     padding: 0.5rem 0.9rem;
     font-weight: 700;
+    border: .1rem solid;
+}
+.color-tag:hover{
+    background-color: var(--second);
 }
 
 
@@ -552,6 +548,11 @@ body {
 }
 .p-paginator-page, .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev, .p-paginator-current {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+svg.p-icon {
+    pointer-events: auto;
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -618,6 +619,7 @@ footer .link {
     }
 }
 
+
 @media screen and (max-width: 1110px) {
     .container-card-principal {
         flex-direction: column;
@@ -627,6 +629,17 @@ footer .link {
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
+    .container-detail-posts{
+        width: 100%;
+    }
+    .section-post{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .more-posts{
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -635,6 +648,12 @@ footer .link {
     }
     #header .menu-search-bar {
         display: flex;
+    }
+    .header1{
+        height: 60px;
+    }
+    .option-header{
+        margin: 0.5rem .2rem;
     }
     .logo{
         flex-direction: row;
@@ -652,9 +671,8 @@ footer .link {
         background: var(--neutro);
         flex-direction: column;
         justify-content: start;
-        align-items: center;
         overflow: hidden;
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.8rem;
         opacity: 0;
         transform: translateY(-20px);
         transition: opacity 0.5s ease, transform 0.5s ease;
@@ -663,7 +681,14 @@ footer .link {
     .section-post{
         padding: 0 .2rem;
     }
-    .back-icons .header-end {
+    .back-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background-color: var(--principal);
+        border-radius: 0rem 1.9rem 0rem;
+        height: 50px;
         display: flex;
     }
     .container-tags {
@@ -673,8 +698,10 @@ footer .link {
         width: 100%;
     }
     .container-tags h1 {
-        background: var(--soft);
         padding: .5rem;
+    }
+    .container-more-posts{
+        padding: .8rem;
     }
     .header-end {
         display: none;
@@ -689,7 +716,7 @@ footer .link {
         height: 350px;
     }
     .posts-destacados {
-        width: 92%;
+        width: 90%;
         display: grid;
         grid-template-columns: 1fr;
         padding-bottom: 1.2rem;
@@ -709,8 +736,9 @@ footer .link {
         width: 100%;
     }
     .more-posts {
-        width: 100%;
+        width: 70%;
         padding: 0;
+        border: .15rem solid;
     }
     .container-template {
         margin: .5rem;
@@ -720,6 +748,7 @@ footer .link {
     }
     .container-filtered{
         padding: 1rem;
+        margin: 0;
     }
     footer {
         display: flex;
