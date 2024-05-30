@@ -1,8 +1,10 @@
-# React + Vite
+Blog Personal sobre temas de Tecnologia 💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+He creado este proyecto personal donde he utilizado React, Javascript , CSS.
 
-Currently, two official plugins are available:
+Es la primera version del blog, sigo reforzando los conocimientos de las tecnologias mencionadas, asi como descubriendo nuevas para los estilos, como bootstrap y tailwind ❤️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Espero les guste !
+
+![image](https://github.com/SandyAstorga/SandyADev/assets/99463040/1041de4e-5fd1-4709-87ec-0cd1ab519a26)
+
