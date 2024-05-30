@@ -385,7 +385,7 @@ body {
 }
 .post-detail {
     padding: 1.5rem;
-    background: var(--neutro);
+    background: white;
 }
 .post-detail h2 {
     text-transform: uppercase;
@@ -465,7 +465,7 @@ body {
 .container-template {
     background: var(--soft);
     border-radius: 0 2rem;
-    margin: 1rem 3rem;
+    margin: 1rem 4rem;
 }
 .container-about {
     padding: 2rem 7rem;
@@ -543,7 +543,7 @@ body {
 /******************************** Paginator ********************************/
 .p-paginator{
     gap: 2.7rem;
-    background-color: var(--neutro);
+    background-color: white;
 }
 .p-link {
     border: 1px solid;
@@ -707,7 +707,7 @@ footer .link {
         padding: .5rem;
     }
     .container-more-posts{
-        padding: .8rem;
+        padding: .8rem 1.1rem;
     }
     .header-end {
         display: none;
