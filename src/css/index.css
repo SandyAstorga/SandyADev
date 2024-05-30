@@ -23,7 +23,7 @@
 body {
     min-height: 100vh;
     background: transparent url("/src/assets/bg1.svg") repeat fixed top center;
-    background-color: var(--soft);
+    /* background-color: var(--soft); */
     background-size: cover;
     font-family: var(--exo);
     font-size: clamp(0.7rem, 2.5vw, 1rem);
@@ -255,7 +255,7 @@ body {
     margin: 1rem 1rem;
     background: var(--neutro);
     border-radius: 2rem;
-    border: 2px solid rgba(0, 0, 0, 1);
+    /* border: 2px solid rgba(0, 0, 0, 1); */
 }
 .post-principal img {
     width: 100%;
@@ -310,7 +310,7 @@ body {
     text-align: center;
     padding: 0 0 1rem 0;
     margin: 0.5rem 0.5rem;
-    background: beige;
+    background: var(--neutro);
     border-radius: 0 2.5rem;
     border: 2px solid rgba(0, 0, 0, 1);
     height: 95%;
@@ -357,7 +357,7 @@ body {
     height: 170px;
     margin: 0 0 0.5rem;
     border-radius: 0 2.4rem;
-    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 1);
+    /* box-shadow: 0 2px 0 0 rgba(0, 0, 0, 1); */
     object-fit: cover;
 }
 
@@ -371,10 +371,11 @@ body {
     padding: 0 1rem;
 }
 .more-posts {
-    width: 40%;
+    background: var(--soft);
+    width: 30%;
     height: 100%;
     padding: 1rem 0; 
-    border: .2rem solid;
+    /* border: .2rem solid; */
 }
 .more-posts .section-title {
     text-align: center;
@@ -384,6 +385,7 @@ body {
 }
 .post-detail {
     padding: 1.5rem;
+    background: var(--neutro);
 }
 .post-detail h2 {
     text-transform: uppercase;
@@ -441,7 +443,7 @@ body {
 }
 .container-detail-posts {
     margin: 1rem 1rem;
-    background: var(--soft);
+    /* background: var(--soft); */
     border-radius: 1rem 0;
 }
 .title-categories {
@@ -534,14 +536,14 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     padding: 1rem 0 0.5rem;
-    background: var(--soft);
+    background: var(--neutro);
     margin: 1rem 0 0;
 }
 
 /******************************** Paginator ********************************/
 .p-paginator{
     gap: 2.7rem;
-    background-color: var(--soft);
+    background-color: var(--neutro);
 }
 .p-link {
     border: 1px solid;
@@ -607,6 +609,9 @@ footer .link {
     align-items: center;
     background: var(--soft);
     margin: 3rem;
+    border-radius: 0 2rem;
+    padding: 1rem;
+    text-align: center;
 }
 
 
@@ -648,6 +653,7 @@ footer .link {
     }
     #header .menu-search-bar {
         display: flex;
+        gap: .5rem;
     }
     .header1{
         height: 60px;
@@ -738,7 +744,7 @@ footer .link {
     .more-posts {
         width: 70%;
         padding: 0;
-        border: .15rem solid;
+        /* border: .15rem solid; */
     }
     .container-template {
         margin: .5rem;
@@ -749,6 +755,9 @@ footer .link {
     .container-filtered{
         padding: 1rem;
         margin: 0;
+    }
+    .not-found{
+        margin: 1.5rem;
     }
     footer {
         display: flex;

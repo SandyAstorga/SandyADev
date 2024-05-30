@@ -52,5 +52,5 @@ export const SearchBar = ({ className, closeMenu }) => {
 
 SearchBar.propTypes = {
     className: PropTypes.string,
-    closeMenu: PropTypes.string,
+    closeMenu: PropTypes.func,
 }

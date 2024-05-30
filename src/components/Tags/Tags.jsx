@@ -33,5 +33,5 @@ export const Tags = ({closeMenu}) => {
 
 
 Tags.propTypes = {
-    closeMenu: PropTypes.string,
+    closeMenu: PropTypes.func,
 }
