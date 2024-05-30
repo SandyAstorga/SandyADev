@@ -192,7 +192,7 @@ body {
     fill: var(--second);
 }
 .results{
-    background: var(--soft);
+    background: white;
     padding: 1rem 0;
     font-size: clamp(.9rem, 2.5vw, 1.2rem);
     text-align: center;
@@ -395,7 +395,7 @@ body {
 }
 .post-detail p {
     padding-bottom: 1rem;
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.87rem, 2.5vw, 1rem);
 }
 .image-detail-post {
     display: flex;
@@ -516,6 +516,7 @@ body {
     padding: 0.5rem 0.9rem;
     font-weight: 700;
     border: .1rem solid;
+    cursor: pointer;
 }
 .color-tag:hover{
     background-color: var(--second);
@@ -534,9 +535,9 @@ body {
     font-weight: 500;
     font-size: clamp(0.5rem, 2.5vw, 1rem);
     text-transform: uppercase;
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 1rem 0 0.5rem;
-    background: var(--neutro);
+    background: white;
     margin: 1rem 0 0;
 }
 
