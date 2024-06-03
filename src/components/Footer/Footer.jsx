@@ -11,7 +11,7 @@ export const Footer = () => {
                 </section>
                 <section className="f-menu">
                     <Link to={'/'} className="option-footer" onClick={handleUp}>Home</Link>
-                    <Link to={'/about-me'} className="option-footer" onClick={handleUp}>Acerca de mi</Link>
+                    <Link to={'/courses'} className="option-footer" onClick={handleUp}>Cursos</Link>
                     <a className='link' href="https://portfolio-sandyastorga.vercel.app" target="_blank">
                         <p className="option-footer">Portfolio</p>
                     </a>

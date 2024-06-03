@@ -63,8 +63,8 @@ export const Header = () => {
                 </div>
                 <div className={`links-menu ${menuOpen ? 'open' : ''}`}>
                     <span className='option-header' onClick={handleHomeClick}>Home</span>
-                    <span className='option-header' onClick={() => handleMenuOption('/about-me')}>Acerca de mi</span>
-                    <a className='option-header' href="https://portfolio-sandyastorga.vercel.app" target='_blank'>Portfolio</a>
+                    <span className='option-header' onClick={() => handleMenuOption('/courses ')}>Cursos</span>
+                    <a className='option-header' href="https://porfolio-sandra-astorga.vercel.app/" target='_blank'>Portfolio</a>
                     <br />
                     <Tags closeMenu={closeMenu}/>
                     <SearchBar className='menu-search-bar' closeMenu={closeMenu} />

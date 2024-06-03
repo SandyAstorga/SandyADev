@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, About, DetailArticle, Header, Footer } from "./helpers";
+import { Home, Courses, DetailArticle, Header, Footer } from "./helpers";
 import { CategoryProvider } from './Contexts/CategoryProvider';
 import { SearchProvider } from "./Contexts/SearchContext";
 
@@ -15,7 +15,7 @@ export const App = () => {
             <Routes>
               <Route path="*" element={<NotFound />} />
               <Route path="/" element={<Home />} />
-              <Route path="/about-me" element={<About />} />
+              <Route path="/courses" element={<Courses />} />
               <Route path="/post/:id" element={<DetailArticle />} />
               <Route path="/search/:query" element={<Home />} />
             </Routes>
