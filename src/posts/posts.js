@@ -82,7 +82,7 @@ El ecosistema de JavaScript es vasto y en constante crecimiento. Algunas herrami
 
 JavaScript es una herramienta indispensable para cualquier desarrollador web. Su capacidad para trabajar en el frontend y el backend, junto con un ecosistema rico y en constante evolución, lo convierte en un lenguaje poderoso y versátil que sigue creciendo en popularidad.
         `,
-        "date": "Junio 05, 2024",
+        "date": "Mayo 27, 2024",
         "image": post2
     },
     {
@@ -115,7 +115,7 @@ JavaScript no solo se utiliza para el desarrollo web tradicional, sino que tambi
 
 JavaScript ha demostrado ser una herramienta versátil no solo para el desarrollo web, sino también para la creación de videojuegos. Con el apoyo de poderosas bibliotecas y motores de juego, los desarrolladores pueden crear experiencias de juego ricas y accesibles que funcionan directamente en el navegador. Aprender a desarrollar juegos con JavaScript puede ser una excelente manera de expandir tus habilidades y explorar nuevas áreas del desarrollo de software.
         `,
-        "date": "Junio 07, 2024",
+        "date": "Mayo 29, 2024",
         "image": post3
     },
     {
@@ -157,7 +157,7 @@ El futuro de la IA es prometedor y desafiante. Se espera que la IA continúe tra
 
 La inteligencia artificial es una de las tecnologías más emocionantes y transformadoras de nuestro tiempo. Su capacidad para realizar tareas complejas y aprender de manera autónoma tiene el potencial de revolucionar industrias enteras y mejorar nuestra vida diaria. A medida que la IA continúa avanzando, será importante equilibrar la innovación con consideraciones éticas y sociales.
         `,
-        "date": "Junio 10, 2024",
+        "date": "Mayo 31, 2024",
         "image": post4
     },
 ];
