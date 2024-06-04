@@ -396,7 +396,7 @@ body {
 }
 .post-detail p {
     padding-bottom: 1rem;
-    font-size: clamp(0.8rem, 2.5vw, .95rem);
+    font-size: clamp(0.9rem, 2.5vw, .95rem);
 }
 .image-detail-post {
     display: flex;
@@ -433,10 +433,10 @@ body {
     filter: brightness(0.5);
 }
 .thumbnails .two p {
-    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+    font-size: clamp(0.78rem, 2.5vw, 0.8rem);
 }
 .thumbnails .two h1 {
-    font-size: clamp(0.78rem, 2.5vw, 0.9rem);
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     font-weight: 600;
 }
 .selected-post {
@@ -461,19 +461,20 @@ body {
 }
 
 
-/*********************************** About ***********************************/
+/*********************************** Courses ***********************************/
 .container-template {
     background: var(--soft);
     border-radius: 0 2rem;
     margin: 1rem 4rem;
 }
-.container-about {
+.container-courses {
     padding: 2rem 7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.7rem;
+    font-size: clamp(.9rem, 2.5vw, 1.1rem);
 }
 .container-profile {
     width: 170px;
@@ -492,9 +493,13 @@ body {
 }
 .resume {
     text-align: center;
-    font-size: clamp(.9rem, 2.5vw, 1.1rem);
 }
-
+.list {
+    list-style: none;
+}
+.list li {
+    margin-bottom: .7rem;
+}
 
 
 
@@ -749,7 +754,7 @@ footer .link {
     .container-template {
         margin: .5rem;
     }
-    .container-about {
+    .container-courses{
         padding: 1.5rem;
     }
     .container-filtered{

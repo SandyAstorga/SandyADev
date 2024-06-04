@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { myPosts } from '../../posts/posts.js';
 import { handleUp, shuffleArray } from "../../helpers/utils.js";
 import { ProgressSpinner } from 'primereact/progressspinner';
+import {marked} from 'marked';
+import PropTypes from 'prop-types';
 
 
 export const DetailArticle = () => {
@@ -28,6 +30,11 @@ export const DetailArticle = () => {
     const shuffledPosts = shuffleArray(filteredPosts);
     const postsToShow = shuffledPosts.slice(0, 3);
 
+    const PostContent = ({ content }) => {
+        const htmlContent = marked(content);
+        return <div className="post-content" dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+    };
+
     return (
         <>
             <div className="section-post">
@@ -39,7 +46,9 @@ export const DetailArticle = () => {
                             <div className="image-detail-post">
                                 <img src={selectedPost.image} alt={selectedPost.image} />
                             </div>
-                            <p className="post-content">{selectedPost.content}</p>
+                            {/* <p className="post-content">{selectedPost.content}</p> */}
+                            <PostContent content={selectedPost.content} />
+
                         </div>
                     ) : (
                         <ProgressSpinner />
@@ -76,3 +85,8 @@ export const DetailArticle = () => {
         </>
     )
 };
+
+
+DetailArticle.propTypes = {
+    content: PropTypes.string,
+}
