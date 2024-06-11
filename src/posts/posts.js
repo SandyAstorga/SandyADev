@@ -2,6 +2,7 @@ import post1 from '../assets/images/post1.jpg';
 import post2 from '../assets/images/javascript.png'
 import post3 from '../assets/images/post3.jpg'
 import post4 from '../assets/images/AI.jpg'
+import post5 from '../assets/images/post5.png'
 
 export const myPosts = [
     {
@@ -9,7 +10,7 @@ export const myPosts = [
         "category": "Programación",
         "subCategory": "Javascript",
         "title": "¿Por qué es importante aprender a programar?",
-        "type": "principal",
+        "type": "secundario",
         "content": `
 La programación es una habilidad cada vez más relevante en el mundo moderno. Ya sea que estemos hablando de crear aplicaciones móviles, desarrollar software empresarial o automatizar tareas cotidianas, la capacidad de programar es una habilidad poderosa que puede abrir muchas puertas.
 
@@ -160,4 +161,56 @@ La inteligencia artificial es una de las tecnologías más emocionantes y transf
         "date": "Mayo 31, 2024",
         "image": post4
     },
+    {
+        "id": 5,
+        "category": "Programación",
+        "subCategory": "Desarrollo Web",
+        "title": "Desarrollo Web Full Stack en 2024",
+        "type": "principal",
+        "content": `
+El desarrollo web full stack sigue evolucionando rápidamente, con nuevas tecnologías y herramientas emergiendo cada año. En 2024, los desarrolladores full stack deben estar al tanto de las últimas tendencias y prácticas para mantenerse competitivos. Este artículo explora las tecnologías más relevantes, las mejores prácticas y las tendencias que definirán el desarrollo web full stack en 2024.
+
+**Tecnologías Front-end**
+--
+En el front-end, las tecnologías más populares siguen siendo React, Vue.js y Angular. Sin embargo, también estamos viendo un aumento en la adopción de Svelte y Solid.js, que prometen mejorar el rendimiento y la simplicidad en el desarrollo de aplicaciones web.
+
+**React**: Continúa siendo una opción dominante debido a su vasta comunidad, el soporte de Facebook y una amplia gama de bibliotecas y herramientas complementarias.
+
+**Vue.js**: Es conocido por su facilidad de uso y flexibilidad, haciendo que sea una excelente opción para desarrolladores que buscan una curva de aprendizaje más suave.
+
+**Angular**: Respaldado por Google, sigue siendo una opción robusta para aplicaciones empresariales, gracias a su arquitectura estructurada y su conjunto completo de herramientas.
+
+**Tecnologías Back-end**
+--
+En el back-end, Node.js sigue siendo una elección popular para aplicaciones que requieren alta escalabilidad y rendimiento. Además, frameworks como Express, NestJS y Fastify están ganando tracción.
+
+**Node.js**: Permite a los desarrolladores utilizar JavaScript tanto en el front-end como en el back-end, facilitando el desarrollo full stack.
+
+**Express**: Un framework minimalista y flexible que proporciona un conjunto robusto de características para aplicaciones web y móviles.
+
+**NestJS**: Basado en TypeScript, está diseñado para construir aplicaciones escalables y mantenibles, aprovechando el poder de las arquitecturas modulares.
+
+**Bases de Datos**
+--
+Las bases de datos relacionales como PostgreSQL y MySQL siguen siendo esenciales, mientras que las bases de datos NoSQL como MongoDB y Firebase se utilizan para aplicaciones que requieren flexibilidad en el esquema y alta disponibilidad.
+
+**PostgreSQL**: Una base de datos relacional avanzada, conocida por su estabilidad, rendimiento y características avanzadas como transacciones ACID y soporte para JSON.
+
+**MongoDB**: Una base de datos NoSQL, popular por su capacidad para manejar grandes volúmenes de datos no estructurados y su flexibilidad en el diseño de esquemas.
+
+**Mejores Prácticas y Tendencias**
+--
+En 2024, las mejores prácticas en desarrollo web full stack incluyen el uso de CI/CD para automatizar despliegues, la adopción de metodologías ágiles para mejorar la eficiencia del equipo, y un enfoque en la seguridad desde el diseño para proteger los datos y la privacidad de los usuarios.
+
+**CI/CD**: La integración continua y la entrega continua (CI/CD) permiten a los equipos de desarrollo automatizar la construcción, prueba y despliegue de aplicaciones, reduciendo el tiempo de entrega y mejorando la calidad del software.
+
+**Metodologías Ágiles**: Metodologías como Scrum y Kanban siguen siendo esenciales para la gestión de proyectos, permitiendo a los equipos adaptarse rápidamente a los cambios y entregar valor de manera iterativa.
+
+**Seguridad**: Con el aumento de las amenazas cibernéticas, la seguridad desde el diseño se ha vuelto crucial. Esto incluye prácticas como el cifrado de datos, la autenticación multifactor y la revisión constante del código para detectar vulnerabilidades.
+
+El desarrollo web full stack en 2024 estará marcado por la continua evolución de tecnologías y prácticas. Los desarrolladores que se mantengan al día con estas tendencias estarán mejor preparados para enfrentar los desafíos y aprovechar las oportunidades en el dinámico campo del desarrollo web.
+        `,
+        "date": "Junio 06, 2024",
+        "image": post5
+    }
 ];
