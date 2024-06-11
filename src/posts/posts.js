@@ -210,7 +210,7 @@ En 2024, las mejores prácticas en desarrollo web full stack incluyen el uso de 
 
 El desarrollo web full stack en 2024 estará marcado por la continua evolución de tecnologías y prácticas. Los desarrolladores que se mantengan al día con estas tendencias estarán mejor preparados para enfrentar los desafíos y aprovechar las oportunidades en el dinámico campo del desarrollo web.
         `,
-        "date": "Junio 06, 2024",
+        "date": "Junio 10, 2024",
         "image": post5
     }
 ];
