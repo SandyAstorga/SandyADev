@@ -123,7 +123,7 @@ JavaScript ha demostrado ser una herramienta versátil no solo para el desarroll
         "category": "Tecnología",
         "subCategory": "Inteligencia Artificial",
         "title": "¿Qué es la IA?",
-        "type": "secundario",
+        "type": "destacado",
         "content": `
 La inteligencia artificial (IA) es un campo de la informática que se centra en la creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Estas tareas incluyen el reconocimiento de voz, el aprendizaje, la planificación y la resolución de problemas.
 
