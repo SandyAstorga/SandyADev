@@ -28,6 +28,7 @@ export const Courses = () => {
                             <ul>
                                 <li><a href="https://www.youtube.com/watch?v=QoC4RxNIs5M&ab_channel=HolaMundo" target="_blank" rel="noopener noreferrer">Aprende JavaScript Ahora! curso completo desde cero para principiantes</a></li>
                                 <li><a href="https://www.youtube.com/watch?v=ivdTnPl1ND0&ab_channel=freeCodeCampEspa%C3%B1ol" target="_blank" rel="noopener noreferrer">Aprende JavaScript - Curso Completo desde Cero</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=koiPxFFiqJ4&ab_channel=freeCodeCampEspa%C3%B1ol" target="_blank" rel="noopener noreferrer">JavaScript para Manipulación del DOM - Curso con Proyectos</a></li>
                             </ul>
                         </li>
                         <br />

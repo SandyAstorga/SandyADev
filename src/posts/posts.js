@@ -1,8 +1,9 @@
 import post1 from '../assets/images/post1.jpg';
-import post2 from '../assets/images/javascript.png'
-import post3 from '../assets/images/post3.jpg'
-import post4 from '../assets/images/AI.jpg'
-import post5 from '../assets/images/post5.png'
+import post2 from '../assets/images/javascript.png';
+import post3 from '../assets/images/post3.jpg';
+import post4 from '../assets/images/AI.jpg';
+import post5 from '../assets/images/post5.png';
+import post6 from '../assets/images/PWA.png';
 
 export const myPosts = [
     {
@@ -10,7 +11,7 @@ export const myPosts = [
         "category": "Programación",
         "subCategory": "Javascript",
         "title": "¿Por qué es importante aprender a programar?",
-        "type": "secundario",
+        "type": "destacado",
         "content": `
 La programación es una habilidad cada vez más relevante en el mundo moderno. Ya sea que estemos hablando de crear aplicaciones móviles, desarrollar software empresarial o automatizar tareas cotidianas, la capacidad de programar es una habilidad poderosa que puede abrir muchas puertas.
 
@@ -45,7 +46,7 @@ En resumen, aprender a programar es una inversión valiosa en tu futuro. Ya sea 
         "category": "Programación",
         "subCategory": "Javascript",
         "title": "¿Qué es JavaScript?",
-        "type": "destacado",
+        "type": "secundario",
         "content": `
 JavaScript es un lenguaje de programación que se utiliza principalmente para crear contenido web interactivo. Es uno de los tres pilares del desarrollo web, junto con HTML y CSS.
 
@@ -124,7 +125,7 @@ JavaScript ha demostrado ser una herramienta versátil no solo para el desarroll
         "category": "Tecnología",
         "subCategory": "Inteligencia Artificial",
         "title": "¿Qué es la IA?",
-        "type": "destacado",
+        "type": "secundario",
         "content": `
 La inteligencia artificial (IA) es un campo de la informática que se centra en la creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Estas tareas incluyen el reconocimiento de voz, el aprendizaje, la planificación y la resolución de problemas.
 
@@ -166,7 +167,7 @@ La inteligencia artificial es una de las tecnologías más emocionantes y transf
         "category": "Programación",
         "subCategory": "Desarrollo Web",
         "title": "Desarrollo Web Full Stack en 2024",
-        "type": "principal",
+        "type": "destacado",
         "content": `
 El desarrollo web full stack sigue evolucionando rápidamente, con nuevas tecnologías y herramientas emergiendo cada año. En 2024, los desarrolladores full stack deben estar al tanto de las últimas tendencias y prácticas para mantenerse competitivos. Este artículo explora las tecnologías más relevantes, las mejores prácticas y las tendencias que definirán el desarrollo web full stack en 2024.
 
@@ -212,5 +213,54 @@ El desarrollo web full stack en 2024 estará marcado por la continua evolución 
         `,
         "date": "Junio 10, 2024",
         "image": post5
-    }
+    },
+    {
+        "id": 6,
+        "category": "Programación",
+        "subCategory": "Desarrollo Web",
+        "title": "Desarrollo Web Progresivo (PWA): El Futuro de las Aplicaciones Web",
+        "type": "principal",
+        "content": `
+El Desarrollo Web Progresivo (PWA, por sus siglas en inglés) está revolucionando la forma en que interactuamos con las aplicaciones web. Las PWAs combinan lo mejor de las aplicaciones web y las aplicaciones móviles, ofreciendo una experiencia de usuario rica y envolvente que no depende de la conectividad constante. En este artículo, exploraremos qué son las PWAs, sus beneficios, y cómo empezar a desarrollar tu propia PWA.
+    
+**¿Qué es una PWA?**
+--
+Una Aplicación Web Progresiva (PWA) es una aplicación que utiliza tecnologías web modernas para ofrecer una experiencia similar a la de una aplicación nativa. Las PWAs están diseñadas para funcionar en cualquier navegador, pero se comportan de manera más robusta y rápida, permitiendo características como notificaciones push, acceso sin conexión y la capacidad de ser instaladas en la pantalla de inicio del dispositivo del usuario.
+
+**Beneficios de las PWAs**
+--
+Las PWAs ofrecen múltiples beneficios tanto para los desarrolladores como para los usuarios:
+
+1. **Rendimiento Mejorado**: Gracias a la capacidad de cacheo y la carga dinámica de contenido, las PWAs ofrecen tiempos de carga rápidos y una experiencia de usuario fluida.
+2. **Compatibilidad Cross-Platform**: Las PWAs funcionan en cualquier dispositivo con un navegador moderno, eliminando la necesidad de desarrollar versiones separadas para iOS y Android.
+3. **Instalación Sin Fricción**: Los usuarios pueden añadir una PWA a su pantalla de inicio sin pasar por una tienda de aplicaciones, facilitando la adopción.
+4. **Actualizaciones Silenciosas**: Las PWAs se actualizan automáticamente en segundo plano, asegurando que los usuarios siempre tengan la última versión.
+5. **Funcionamiento Offline**: Gracias al uso de Service Workers, las PWAs pueden funcionar sin conexión, ofreciendo una experiencia continua incluso en ausencia de internet.
+
+**Tecnologías Clave en el Desarrollo de PWAs**
+--
+Para desarrollar una PWA, es esencial familiarizarse con ciertas tecnologías y conceptos:
+
+1. **Service Workers**: Son scripts que el navegador ejecuta en segundo plano y que permiten características como notificaciones push y cacheo de recursos, habilitando el modo offline.
+2. **Manifesto de la Aplicación Web**: Un archivo JSON que proporciona información sobre la aplicación (nombre, icono, colores, etc.) y permite su instalación en la pantalla de inicio del dispositivo.
+3. **HTTPS**: Las PWAs requieren una conexión segura para funcionar correctamente, asegurando la integridad y confidencialidad de los datos.
+
+**Cómo Empezar con el Desarrollo de una PWA**
+--
+Aquí tienes una guía paso a paso para crear tu propia PWA:
+
+1. **Crea una Página Web Básica**: Empieza con una aplicación web sencilla utilizando HTML, CSS y JavaScript.
+2. **Configura un Service Worker**: Registra un Service Worker para manejar el cacheo de recursos y la funcionalidad offline.
+3. **Añade un Manifesto de Aplicación**: Crea un archivo manifest.json con los detalles de tu aplicación.
+4. **Implementa HTTPS**: Asegura tu aplicación web con HTTPS utilizando certificados SSL.
+5. **Prueba y Optimiza**: Usa herramientas como Lighthouse de Google para evaluar y mejorar el rendimiento de tu PWA.
+
+
+El Desarrollo Web Progresivo está transformando la manera en que construimos y experimentamos las aplicaciones web. Con su capacidad para ofrecer un rendimiento superior, compatibilidad cross-platform y características avanzadas como el funcionamiento offline, las PWAs representan el futuro del desarrollo web. Los desarrolladores que adopten esta tecnología estarán mejor posicionados para crear aplicaciones que satisfagan las crecientes expectativas de los usuarios modernos.
+
+Explorar y aprender a implementar PWAs puede abrir nuevas oportunidades y ventajas competitivas en el dinámico campo del desarrollo web.
+        `,
+        "date": "Junio 17, 2024",
+        "image": post6
+    },    
 ];
