@@ -4,9 +4,6 @@ export const Card = ({ title, image, date, category, subCategory, type}) => {
   return (
     <>
       <div className="post">
-        {/* <div className='bg-tag'>
-          <span className='type-tag'>{type}</span>
-        </div> */}
         <div className={`bg-tag ${type === 'destacado' ? 'destacado' : ''}`}>
           <span className={`type-tag ${type === 'destacado' ? 'destacado' : ''}`}>{type}</span>
         </div>
