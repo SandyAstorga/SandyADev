@@ -59,7 +59,7 @@ export const Header = () => {
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'center', cursor: 'pointer' }}>
                         <img onClick={handleHomeClick} src={logo} alt="logo" />
                     </div>
-                    <p>SandyADev</p>
+                    <p style={{textShadow: '2px 2px #1d1d1d', fontWeight: '800', cursor: 'pointer'}} onClick={handleHomeClick}>SandyADev</p>
                 </div>
                 <div className={`links-menu ${menuOpen ? 'open' : ''}`}>
                     <span className='option-header' onClick={handleHomeClick}>Home</span>
