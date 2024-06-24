@@ -7,7 +7,7 @@ import { handleUp } from "../../helpers/utils.js";
 
 export const PaginatorCards = ({ allData }) => {
     const [first, setFirst] = useState(0);
-    const [rows, setRows] = useState(5);
+    const [rows, setRows] = useState(6);
 
     const onPageChange = (event) => {
         setFirst(event.first);

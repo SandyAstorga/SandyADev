@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { SearchBar } from '../SearchBar/SearchBar';
 import { Icons } from "../../components/Icons/Icons";
 import { Tags } from '../../components/Tags/Tags.jsx';
-import logo from '../../assets/icon.png';
+// import logo from '../../assets/icon.png';
 import { useNavigate } from 'react-router-dom';
 
 export const Header = () => {
@@ -56,10 +56,11 @@ export const Header = () => {
         <nav id="header" className={navClass}>
             <div className="container-header">
                 <div className="logo">
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center', cursor: 'pointer' }}>
+                    {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center', cursor: 'pointer' }}>
                         <img onClick={handleHomeClick} src={logo} alt="logo" />
                     </div>
-                    <p style={{textShadow: '2px 2px #1d1d1d', fontWeight: '800', cursor: 'pointer'}} onClick={handleHomeClick}>SandyADev</p>
+                    <p style={{textShadow: '2px 2px #1d1d1d', fontWeight: '800', cursor: 'pointer'}} onClick={handleHomeClick}>SandyADev</p> */}
+                    <p className='name-blog' onClick={handleHomeClick}> &lt; / &gt; <br /> SandyA Dev</p>
                 </div>
                 <div className={`links-menu ${menuOpen ? 'open' : ''}`}>
                     <span className='option-header' onClick={handleHomeClick}>Home</span>

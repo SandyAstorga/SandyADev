@@ -32,15 +32,14 @@ export const Courses = () => {
                             </ul>
                         </li>
                         <br />
-                        {/* <li>
-                            <h4>Fundamentos de la Inteligencia Artificial</h4>
+                        <li>
+                            <h4>Ideas de Proyectos para Practicar</h4>
                             <ul>
-                                <li><a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtO65LeD2p4_Sb5XQ51par_b" target="_blank" rel="noopener noreferrer">Curso de Introducción a la Inteligencia Artificial (YouTube)</a></li>
-                                <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOABXSygHTsbvUz4G_YQhOb" target="_blank" rel="noopener noreferrer">Curso de Aprendizaje Automático (Machine Learning) (YouTube)</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=BA328RQa08M&ab_channel=freeCodeCampEspa%C3%B1ol">Crea 7 Proyectos con HTML, CSS y JavaScript - Curso Práctico</a></li>
                             </ul>
                         </li>
                         <br />
-                        <li>
+                        {/* <li>
                             <h4>Desarrollo de Videojuegos con JavaScript</h4>
                             <ul>
                                 <li><a href="https://www.youtube.com/playlist?list=PLD8nQCAhR3tYqxBd61F0js3sqq6rYq1Ty" target="_blank" rel="noopener noreferrer">Curso de Desarrollo de Videojuegos con JavaScript y Phaser (YouTube)</a></li>

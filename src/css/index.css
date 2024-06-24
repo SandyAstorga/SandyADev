@@ -1,5 +1,7 @@
 /* ***********************************************Fonts ************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
 
 :root {
     /******* Colors *******/
@@ -12,6 +14,7 @@
 
     /********** Font **********/
     --exo: "Exo 2", sans-serif;
+    --rubik: "Rubik Doodle Shadow", system-ui;
 }
 
 /************************************** General **************************************/
@@ -23,7 +26,6 @@
 body {
     min-height: 100vh;
     background: transparent url("/src/assets/bg1.svg") repeat fixed top center;
-    /* background-color: var(--soft); */
     background-size: cover;
     font-family: var(--exo);
     font-size: clamp(0.7rem, 2.5vw, 1rem);
@@ -142,7 +144,15 @@ body {
     margin: 1rem;
     cursor: pointer;
 }
-
+.name-blog {
+    font-family: var(--rubik) !important;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    cursor: pointer;
+    text-align: center;
+}
+.name-blog:hover{
+    color: #1d1d1d !important;
+}
 
 
 

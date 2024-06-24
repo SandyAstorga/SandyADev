@@ -23,9 +23,11 @@ export const DetailArticle = () => {
         }
     }, [selectedPostId]);
 
-    const filteredPosts = selectedPostId
-        ? myPosts.filter(post => post.id !== selectedPostId)
-        : myPosts;
+    // const filteredPosts = selectedPostId
+    //     ? myPosts.filter(post => post.id !== selectedPostId)
+    //     : myPosts;
+    
+    const filteredPosts = myPosts.filter(post => post.id !== parseInt(id));
 
     const shuffledPosts = shuffleArray(filteredPosts);
     const postsToShow = shuffledPosts.slice(0, 3);

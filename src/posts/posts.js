@@ -4,6 +4,7 @@ import post3 from '../assets/images/post3.jpg';
 import post4 from '../assets/images/AI.jpg';
 import post5 from '../assets/images/post5.png';
 import post6 from '../assets/images/PWA.png';
+import post7 from '../assets/images/spring-boot.jpeg';
 
 export const myPosts = [
     {
@@ -11,7 +12,7 @@ export const myPosts = [
         "category": "Programación",
         "subCategory": "Javascript",
         "title": "¿Por qué es importante aprender a programar?",
-        "type": "destacado",
+        "type": "secundario",
         "content": `
 La programación es una habilidad cada vez más relevante en el mundo moderno. Ya sea que estemos hablando de crear aplicaciones móviles, desarrollar software empresarial o automatizar tareas cotidianas, la capacidad de programar es una habilidad poderosa que puede abrir muchas puertas.
 
@@ -219,7 +220,7 @@ El desarrollo web full stack en 2024 estará marcado por la continua evolución 
         "category": "Programación",
         "subCategory": "Desarrollo Web",
         "title": "Desarrollo Web Progresivo (PWA): El Futuro de las Aplicaciones Web",
-        "type": "principal",
+        "type": "destacado",
         "content": `
 El Desarrollo Web Progresivo (PWA, por sus siglas en inglés) está revolucionando la forma en que interactuamos con las aplicaciones web. Las PWAs combinan lo mejor de las aplicaciones web y las aplicaciones móviles, ofreciendo una experiencia de usuario rica y envolvente que no depende de la conectividad constante. En este artículo, exploraremos qué son las PWAs, sus beneficios, y cómo empezar a desarrollar tu propia PWA.
     
@@ -262,5 +263,56 @@ Explorar y aprender a implementar PWAs puede abrir nuevas oportunidades y ventaj
         `,
         "date": "Junio 17, 2024",
         "image": post6
-    },    
+    },
+    {
+        "id": 7,
+        "category": "Programación",
+        "subCategory": "Desarrollo Web",
+        "title": "Spring Boot: Simplificando el Desarrollo de Aplicaciones Java",
+        "type": "principal",
+        "content": `
+Spring Boot es una herramienta poderosa para simplificar el desarrollo de aplicaciones basadas en el framework Spring. Este artículo te guiará a través de los conceptos clave, los beneficios y cómo empezar con Spring Boot.
+    
+**¿Qué es Spring Boot?**
+--
+Spring Boot es un proyecto de Spring que permite a los desarrolladores crear aplicaciones de producción basadas en Spring que funcionan sin problemas, con una configuración mínima. Proporciona una configuración predeterminada para las aplicaciones, lo que facilita la creación de aplicaciones independientes y listas para producción.
+
+**Beneficios de Spring Boot**
+--
+Spring Boot ofrece numerosos beneficios tanto para los desarrolladores como para las empresas:
+
+1. **Configuración Automática**: Spring Boot configura automáticamente tu aplicación en función de las dependencias que incluyas en tu proyecto.
+2. **Microservicios**: Facilita la creación de microservicios con configuraciones mínimas y escalabilidad.
+3. **Servidor Embebido**: Las aplicaciones Spring Boot pueden ejecutarse de manera independiente con servidores embebidos como Tomcat, Jetty o Undertow.
+4. **Facilidad de Desarrollo**: Ofrece una variedad de características listas para usar, como seguridad, gestión de datos y servicios web, lo que acelera el desarrollo.
+5. **Gran Comunidad y Documentación**: Cuenta con una gran comunidad de desarrolladores y una documentación exhaustiva que facilita el aprendizaje y la resolución de problemas.
+
+**Tecnologías Clave en el Desarrollo con Spring Boot**
+--
+Para desarrollar aplicaciones con Spring Boot, es esencial familiarizarse con ciertas tecnologías y conceptos:
+
+1. **Spring Framework**: Es la base sobre la cual se construye Spring Boot, proporcionando capacidades de inyección de dependencias, manejo de transacciones y mucho más.
+2. **Spring Boot Starters**: Son una serie de dependencias convenientes que simplifican la configuración de nuevas aplicaciones, eliminando la necesidad de una configuración detallada.
+3. **Spring Boot Actuator**: Proporciona características de monitoreo y gestión para tu aplicación.
+4. **Spring Initializr**: Una herramienta en línea para crear rápidamente un proyecto Spring Boot inicial con la configuración básica.
+
+**Cómo Empezar con Spring Boot**
+--
+Aquí tienes una guía paso a paso para crear tu primera aplicación Spring Boot:
+
+1. **Configura tu Entorno de Desarrollo**: Instala Java, un IDE (como IntelliJ IDEA o Eclipse) y Maven.
+2. **Crea un Nuevo Proyecto con Spring Initializr**: Utiliza [Spring Initializr](https://start.spring.io/) para generar un nuevo proyecto con las dependencias básicas.
+3. **Configura tu Aplicación**: Edita el archivo \`application.properties\` para configurar tu aplicación según tus necesidades.
+4. **Desarrolla Tu Aplicación**: Crea controladores, servicios y repositorios para implementar la lógica de tu aplicación.
+5. **Ejecuta y Prueba**: Ejecuta tu aplicación utilizando el servidor embebido y prueba las funcionalidades implementadas.
+6. **Despliegue**: Despliega tu aplicación en un entorno de producción utilizando Docker, Kubernetes o un servicio en la nube.
+
+Spring Boot ha revolucionado el desarrollo de aplicaciones Java, ofreciendo una forma más rápida y sencilla de construir aplicaciones robustas y escalables. Con su configuración automática, su ecosistema de herramientas y su comunidad activa, Spring Boot es una opción excelente para cualquier desarrollador que busque mejorar su productividad y la calidad de su código.
+
+Explorar y aprender a implementar Spring Boot puede abrir nuevas oportunidades y ventajas competitivas en el campo del desarrollo de software.
+    `,
+        "date": "Junio 24, 2024",
+        "image": post7
+    }
+    
 ];
