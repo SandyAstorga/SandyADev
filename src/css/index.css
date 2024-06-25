@@ -25,8 +25,8 @@
 }
 body {
     min-height: 100vh;
-    background: transparent url("/src/assets/bg1.svg") repeat fixed top center;
-    background-size: cover;
+    /* background: transparent url("/src/assets/bg1.svg") repeat fixed top center;
+    background-size: cover; */
     font-family: var(--exo);
     font-size: clamp(0.7rem, 2.5vw, 1rem);
     font-weight: 400;
@@ -44,6 +44,8 @@ body {
 .container-views {
     width: 100%;
     min-height: 100vh;
+    background: transparent url("/src/assets/bg1.svg") repeat fixed top center;
+    background-size: cover;
 }
 
 
@@ -184,7 +186,7 @@ body {
 
 
 
-/*************** SearchBar ****************************************************/
+/*************************************SearchBar ********************************/
 .container-search-bar {
     display: flex;
     justify-content: center;
@@ -260,7 +262,7 @@ body {
     margin: 0 1.5rem;
 }
 .post-principal {
-    height: 500px;
+    height: 550px;
     overflow: hidden;
     margin: 1rem 1rem;
     background: var(--neutro);
@@ -325,7 +327,7 @@ body {
     margin: 0.5rem 0.5rem;
     background: var(--neutro);
     border-radius: 0 2.5rem;
-    border: 2px solid #1d1d1d;
+    /* border: 2px solid #1d1d1d; */
     height: 95%;
     position: relative;
     box-shadow: 2px 2px 0 0 #1d1d1d;
